@@ -1,3 +1,113 @@
-@tailwind base;
-@tailwind components;
+
 @tailwind utilities;
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Spiderman Theme */
+@theme {
+  --color-spiderman-red: #B91C1C;
+  --color-spiderman-accent: #EF4444;
+  --color-spiderman-black: #020617;
+  --color-spiderman-surface: #111827;
+  --color-spiderman-text: #E5E7EB;
+}
+
+body {
+  background-color: #111827;
+}
+
+.hero-image {
+  min-height : 10rem ;
+  height : 20rem ;
+  max-height: 22rem;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ac0000, #ff0000 );
+  background-size: 200% 200%;
+  background-position: left center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: background-position 0.6s ease, transform 0.2s ease;
+}
+
+.avatar {
+  @layer daisyui.l1.l2.l3 {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    & > div {
+      display: block;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.avatar > div {
+  border-radius: 9999px;
+  box-shadow:
+    0 0 0 3px rgba(34, 197, 94, 0.5), 
+    0 0 12px rgba(34, 197, 94, 0.7); 
+}
+
+.avatar-online {
+  position : relative ;
+
+  @layer daisyui.l1.l2 {
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      display: block;
+      border-radius: calc(infinity * 1px);
+      background-color: var(--color-success) /* var(--color-success) */;
+      outline: 2px solid var(--color-base-100) /* var(--color-base-100) */;
+      width: 15%;
+      height: 15%;
+      bottom : 7% !important;
+      right: 7% !important;
+      top : auto !important;
+    }
+  }
+}
+
+.btn-flow {
+  background: linear-gradient(270deg, #ff0000, #a10000, #680000);
+  background-size: 200% 200%;
+  background-position: left center;
+
+  color: white;
+  padding: 12px 26px;
+  box-shadow : none ;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: larger;
+  cursor: pointer;
+
+  transition: background-position 0.6s ease, transform 0.2s ease;
+}
+
+.btn-flow:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+}
+
+.gradient-text:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
