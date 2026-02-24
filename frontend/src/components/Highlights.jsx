@@ -1,6 +1,5 @@
 import React from "react";
 import HighlightCard from "./HighlightCard";
-import CollegeLogo from "../assets/CollegeLogo.png"
 
 function Highlights() {
   return (
