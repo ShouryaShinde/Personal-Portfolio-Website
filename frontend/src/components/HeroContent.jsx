@@ -29,7 +29,7 @@ function HeroContent() {
             icon = "LinkedIn"
           />
           <LinkIcon 
-            href = "mailto:shindeshauryaanil@gmail.com" 
+            href = "https://mailto:shindeshauryaanil@gmail.com" 
             icon = "Gmail"
           />
         </div>
