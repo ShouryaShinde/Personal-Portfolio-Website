@@ -1,19 +1,14 @@
 import React from 'react' ;
-import HeroBackground from '../assets/HeroBackground.png' ;
 import HeroContent from './HeroContent';
+import GridBackground from './GridBackground';
 import HeroFloatImage from './HeroImage';
 import ContactButton from './ContactButton';
 
 function Hero() {
   return (
-    <div>
-      <div className="hero bg-base-200 min-h-screen relative overflow-hidden">
-        <img
-          src={HeroBackground}
-          alt="Background"
-          loading="lazy"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+    <div >
+      <div className="hero bg-black min-h-screen relative overflow-hidden">
+        <GridBackground />
         <ContactButton />
         <div className="hero-content flex-col lg:flex-row-reverse">
           <HeroFloatImage />
