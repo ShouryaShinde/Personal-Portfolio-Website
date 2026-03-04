@@ -1,13 +1,14 @@
+import { useState } from "react";
 import React from "react" ;
-import HeroSpiderman from '../assets/HeroSpiderman.jpeg' ;
 
-function HeroFloatImage() {
+function Terminal() {
   return(
-    <div
-      style = {{backgroundImage : `url(${HeroSpiderman})`}}
-      className="hero-image rounded-lg bg-cover bg-center bg-no-repeat w-72 aspect-3/4 mr-52"
-    />
+    <div className="mockup-code w-full">
+      <pre data-prefix="$"><code>npm i daisyui</code></pre>
+      <pre data-prefix=">" className="text-warning"><code>installing...</code></pre>
+      <pre data-prefix=">" className="text-success"><code>Done!</code></pre>
+    </div>
   );
 }
 
-export default HeroFloatImage ;
+export default Terminal ;

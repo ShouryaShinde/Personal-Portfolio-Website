@@ -25,7 +25,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #ac0000, #ff0000 );
+  background: linear-gradient(to right,  #0C7779 , #249E94 , #3BC1A8 );
   background-size: 200% 200%;
   background-position: left center;
   -webkit-background-clip: text;
@@ -81,7 +81,7 @@ body {
 }
 
 .btn-flow {
-  background: linear-gradient(270deg, #ff0000, #a10000, #680000);
+  background: linear-gradient(270deg, #005461, #0C7779 , #249E94 , #3BC1A8);
   background-size: 200% 200%;
   background-position: left center;
 
