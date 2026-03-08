@@ -2,21 +2,42 @@ import React from "react";
 
 function HighlightCard(props) {
   return (
-    <div className= {`card h-full ${props.borderGradient} `}>
-      <div className="card2 h-full max-w-lg">
+    <div className={`card h-full ${props.width ?? "w-full"} ${props.borderGradient}`}>
+      <div className="card2 h-full w-full">
         <div className="card-body flex flex-col h-full">
-          <div className="flex flex-row gap-5 items-center">
-            <h2 className={`card-title font-bold ${props.titleColor}`}>
-              {props.title}
-            </h2>
-          </div>
-          <p className={`anton-regular ${props.textColor} whitespace-pre-line`}>
-            {props.text}
-          </p>
 
+          {/* Top Section */}
+          <div className="flex flex-row justify-between items-start gap-4">
+
+            {/* Left side (Title + Text) */}
+            <div className="flex flex-col flex-1">
+              <h2 className={`card-title font-bold ${props.titleColor}`}>
+                {props.title}
+              </h2>
+
+              <p
+                className={`ubuntu-light ${props.textColor} whitespace-pre-line mt-2`}
+              >
+                {props.text}
+              </p>
+            </div>
+
+            {/* Right side (Image) */}
+            {props.src && (
+              <div className="flex-shrink-0">
+                <img src={props.src} style={{ height: props.ht }} alt="icon" />
+              </div>
+            )}
+
+          </div>
+
+          {/* Badges */}
           <div className="card-actions justify-end mt-auto flex-wrap gap-2">
             {props.badge?.map((item, index) => (
-              <div key={index} className={`badge badge-outline ${props.badgeStyle}`}>
+              <div
+                key={index}
+                className={`badge badge-outline ${props.badgeStyle}`}
+              >
                 {item}
               </div>
             ))}

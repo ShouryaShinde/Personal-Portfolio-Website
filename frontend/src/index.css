@@ -116,6 +116,12 @@ body {
   font-style: normal;
 }
 
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
 .card {
   width: auto;
   height: auto;
@@ -132,7 +138,7 @@ body {
 
 .card2 {
   width: auto;
-  height: 200px;
+  height: 250px;
   background-color: #000000;
   border-radius: 18px;
 }
