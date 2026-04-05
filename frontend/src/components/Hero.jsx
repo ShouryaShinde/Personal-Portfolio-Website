@@ -1,7 +1,7 @@
 import React from 'react' ;
 import HeroContent from './HeroContent';
 import GridBackground from './GridBackground';
-import Terminal from './HeroImage';
+import GithubGrid from './GithubGrid';
 import ContactButton from './ContactButton';
 
 function Hero() {
@@ -11,7 +11,7 @@ function Hero() {
         <GridBackground />
         <ContactButton />
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <Terminal />
+          <GithubGrid />
           <HeroContent />
         </div>
       </div>

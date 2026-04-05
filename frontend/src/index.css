@@ -3,15 +3,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* Spiderman Theme */
-@theme {
-  --color-spiderman-red: #b91c1c;
-  --color-spiderman-accent: #ef4444;
-  --color-spiderman-black: #020617;
-  --color-spiderman-surface: #111827;
-  --color-spiderman-text: #e5e7eb;
-}
-
 body {
   margin: 0;
   background-color: #000000;
@@ -27,7 +18,7 @@ body {
   background: linear-gradient(to right, #0c7779, #249e94, #3bc1a8);
   background-size: 200% 200%;
   background-position: left center;
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 
   transition:
@@ -119,7 +110,22 @@ body {
 .ubuntu-light {
   font-family: "Ubuntu", sans-serif;
   font-weight: 300;
-  font-style: italic;
+  font-style: normal;
+}
+
+
+.space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-grotesk-300 {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .card {

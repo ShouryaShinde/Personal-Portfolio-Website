@@ -10,12 +10,12 @@ function HeroContent() {
   return (
     <div className="ml-18">
       <AvatarSection />
-      <h1 className="text-5xl font-bold pb-4 gradient-text">Shourya Shinde</h1>
-      <h1 className="text-1xl font-bold text-gray-300">
+      <h1 className="text-5xl font-bold space-grotesk pb-4 gradient-text">Shourya Shinde</h1>
+      <h1 className="text-1xl font-bold space-grotesk text-gray-300">
         Full-Stack Developer & Competitive Programmer
       </h1>
-      <p className="pt-5 pb-6 w-4/5 text-gray-400 anton-regular">{ptext}</p>
-      <button className="btn btn-primary btn-flow text-gray-300"
+      <p className="pt-5 pb-6 w-4/5 space-grotesk text-gray-400 ">{ptext}</p>
+      <button className="btn btn-primary btn-flow text-gray-300 space-grotesk"
         onClick={() => window.open("/resume.pdf", "_blank")}
       >Resume</button>
       <div className="mt-7">

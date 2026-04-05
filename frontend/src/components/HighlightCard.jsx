@@ -11,12 +11,12 @@ function HighlightCard(props) {
 
             {/* Left side (Title + Text) */}
             <div className="flex flex-col flex-1">
-              <h2 className={`card-title font-bold ${props.titleColor}`}>
+              <h2 className={`card-title font-bold space-grotesk ${props.titleColor}`}>
                 {props.title}
               </h2>
 
               <p
-                className={`ubuntu-light ${props.textColor} whitespace-pre-line mt-2`}
+                className={`space-grotesk-300 ${props.textColor} whitespace-pre-line mt-2 text-base`}
               >
                 {props.text}
               </p>
@@ -24,7 +24,7 @@ function HighlightCard(props) {
 
             {/* Right side (Image) */}
             {props.src && (
-              <div className="flex-shrink-0">
+              <div className="shrink-0">
                 <img src={props.src} style={{ height: props.ht }} alt="icon" />
               </div>
             )}

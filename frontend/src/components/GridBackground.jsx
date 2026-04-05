@@ -2,7 +2,7 @@ import GridPattern from "./GridPattern"
 
 export default function GridBackground() {
   return (
-    <div className="relative flex h-125 w-full items-center justify-center overflow-hidden rounded-lg bg-black">
+    <div className="relative flex h-[60vh] w-full items-center justify-center overflow-hidden rounded-lg bg-black">
       <GridPattern
         squares={[
           [4, 4],

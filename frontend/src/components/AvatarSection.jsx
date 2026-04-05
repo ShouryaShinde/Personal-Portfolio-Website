@@ -11,10 +11,10 @@ function AvatarSection() {
         ></div>
       </div>
       <div className="flex flex-col gap-2">
-        <div className="badge badge-outline badge-success rounded-3xl">
-          AVAILABLE FOR OPPORTUNITIES
+        <div className="badge badge-outline badge-success rounded-3xl space-grotesk">
+          Available for Opportunities
         </div>
-        <div className="ml-1 text-gray-400">Pune, India</div>
+        <div className="ml-1 text-gray-400 space-grotesk">Pune, India</div>
       </div>
     </div>
   );

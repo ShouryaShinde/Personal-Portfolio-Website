@@ -4,7 +4,7 @@ function SectionHeader(props) {
   return (
     <div className="flex mt-10 w-full gap-5">
       <div>
-        <h1 className="text-3xl font-bold pb-4 ml-7 w-auto">
+        <h1 className="text-3xl font-bold pb-4 ml-7 w-auto space-grotesk">
           {props.title}
         </h1>
       </div>
