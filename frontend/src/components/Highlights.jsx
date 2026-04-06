@@ -8,7 +8,7 @@ import BinarybrainsIcon from "../assets/BinarybrainsLogo.png" ;
 
 function Highlights() {
   const [stats, setStats] = useState(null);
-
+  const [PRcount , setPRcount] = useState(null) ;
   const [contibutions, setContributions] = useState(null);
   const [leetstats, setleetStats] = useState(null);
 
@@ -19,9 +19,16 @@ function Highlights() {
   }, []);
 
   useEffect(() => {
+    fetch("https://api.github.com/search/issues?q=is:pr+author:ShouryaShinde")
+      .then((res) => res.json())
+      .then((data) => setPRcount(data.total_count)) ;
+  } , []) ;
+
+  useEffect(() => {
     fetch("https://github-contributions-api.jogruber.de/v4/ShouryaShinde")
       .then((res) => res.json())
       .then((data) => {
+        console.log(data) ;
         const totalContributions = Object.values(data.total).reduce(
           (sum, year) => sum + year,
           0,
@@ -98,7 +105,7 @@ function Highlights() {
               title="Development Stats"
               src={GithubIcon}
               ht="50px"
-              text={`Contributions : ${contibutions ?? 0}\nRepositories : ${stats?.public_repos ?? 0}\nFollowers : ${stats?.followers ?? 0}`}
+              text={`Contributions : ${contibutions ?? 0}\nRepositories : ${stats?.public_repos ?? 0}\nPR Count : ${PRcount ?? 0}\nFollowers : ${stats?.followers ?? 0}`}
               badge={["Github", "FullStack"]}
               badgeStyle="badge-secondary"
             />
