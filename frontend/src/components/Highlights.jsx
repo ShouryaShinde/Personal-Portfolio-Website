@@ -1,10 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import HighlightCard from "./HighlightCard";
-import SectionHeader from "./SectionHeader";
-import GithubIcon from "../assets/GithubIcon.png";
-import LeetcodeIcon from "../assets/LeetcodeLogo.png";
-import BinarybrainsIcon from "../assets/BinarybrainsLogo.png" ;
+import HighlightCard from "../assets/HighlightCard";
+import SectionHeader from "../assets/SectionHeader";
+import GithubIcon from "../../public/images/GithubIcon.png";
+import LeetcodeIcon from "../../public/images/LeetcodeLogo.png";
+import BinarybrainsIcon from "../../public/images/BinarybrainsLogo.png" ;
 
 function Highlights() {
   const [stats, setStats] = useState(null);

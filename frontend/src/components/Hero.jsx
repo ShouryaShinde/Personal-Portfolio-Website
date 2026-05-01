@@ -1,8 +1,8 @@
 import React from 'react' ;
-import HeroContent from './HeroContent';
-import GridBackground from './GridBackground';
-import GithubGrid from './GithubGrid';
-import ContactButton from './ContactButton';
+import HeroContent from '../assets/HeroContent';
+import GridBackground from '../assets/GridBackground';
+import GithubGrid from '../assets/GithubGrid';
+import ContactButton from '../assets/ContactButton';
 
 function Hero() {
   return (
