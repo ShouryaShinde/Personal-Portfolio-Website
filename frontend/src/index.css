@@ -128,6 +128,12 @@ body {
   font-style: normal;
 }
 
+.smooch-sans {
+  font-family: "Smooch Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 .card {
   width: auto;
   height: auto;
@@ -149,3 +155,108 @@ body {
   border-radius: 18px;
 }
 
+@property --angle-1 {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --angle-2 {
+  syntax: '<angle>';
+  initial-value: 180deg;
+  inherits: false;
+}
+
+.statscard {
+  position: relative;
+  border-radius: 12px;
+  padding: 2px;
+  background: transparent;
+}
+
+.statscard::before,
+.statscard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.statscard::before {
+  background: conic-gradient(
+    from var(--angle-1),
+    transparent 0deg,
+    transparent 60deg,
+    var(--line-color-1, #fff) 90deg,
+    transparent 120deg,
+    transparent 360deg
+  );
+}
+
+.statscard::after {
+  background: conic-gradient(
+    from var(--angle-2),
+    transparent 0deg,
+    transparent 60deg,
+    var(--line-color-2, #ffee00) 90deg,
+    transparent 120deg,
+    transparent 360deg
+  );
+}
+
+/* Separate animations so they don't clobber each other */
+.statscard:hover::before {
+  opacity: 1;
+  animation: spin-fwd 5s linear infinite;
+}
+
+.statscard:hover::after {
+  opacity: 1;
+  animation: spin-rev 5s linear infinite;
+}
+
+@keyframes spin-fwd {
+  from { --angle-1: 0deg; }
+  to   { --angle-1: 360deg; }
+}
+
+@keyframes spin-rev {
+  from { --angle-2: 360deg; }
+  to   { --angle-2: 0deg; }
+}
+
+.statscontent {
+  position: relative;
+  background: #000000;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  gap: 8px;
+  padding: 30px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.color-empty   { fill: #1a1a1a; }
+.color-scale-1 { fill: #0a3d00; }
+.color-scale-2 { fill: #007a00; }
+.color-scale-3 { fill: #1fb800; }
+.color-scale-4 { fill: #1eff00; }
+
+/* Override default styles */
+.react-calendar-heatmap text {
+  fill: #aaa;
+  font-size: 8px;
+}
+
+.react-calendar-heatmap rect:hover {
+  stroke: #fffb00;
+  stroke-width: 1px;
+}

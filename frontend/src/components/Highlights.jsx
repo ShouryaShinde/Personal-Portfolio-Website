@@ -1,10 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import HighlightCard from "../assets/HighlightCard";
-import SectionHeader from "../assets/SectionHeader";
-import GithubIcon from "../../public/images/GithubIcon.png";
-import LeetcodeIcon from "../../public/images/LeetcodeLogo.png";
-import BinarybrainsIcon from "../../public/images/BinarybrainsLogo.png" ;
+import GithubIcon from "../images/GithubIcon.png";
+import LeetcodeIcon from "../images/LeetcodeLogo.png";
+import BinarybrainsIcon from "../images/BinarybrainsLogo.png" ;
 
 function Highlights() {
   const [stats, setStats] = useState(null);
@@ -54,7 +53,6 @@ function Highlights() {
   return (
     <section id="CareerHighlights">
       <div className="flex flex-col gap-5">
-        <SectionHeader title="Career Highlights" />
         <div className="flex gap-10 m-5 justify-evenly">
           <div className="basis-1/2">
             <HighlightCard
