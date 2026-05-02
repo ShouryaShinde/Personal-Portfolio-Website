@@ -18,7 +18,9 @@ function CPstatscard(props) {
         {/* Header */}
         <div className="flex flex-row justify-between items-center">
           <h1 className="card-title space-grotesk text-2xl">{props.title}</h1>
-          <img src={props.src} className="h-16" alt={props.title} />
+          <a href="https://leetcode.com/u/ShouryaShinde">
+            <img src={props.src} className="h-16" alt={props.title} />
+          </a>
         </div>
 
         {/* Stats row */}
