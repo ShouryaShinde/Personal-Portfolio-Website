@@ -260,3 +260,57 @@ body {
   stroke: #fffb00;
   stroke-width: 1px;
 }
+
+.techstackcard {
+  position : relative ;
+  overflow : hidden ;
+  border-radius : 8px ;
+  border : 1px solid;
+  border-color: #505050;
+}
+
+hr{
+  border : 1px solid #505050 ;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.beam {
+  position : absolute ;
+  top : -6px ;
+  width : 15% ;
+  height : 14px ;
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg ,
+    transparent, #3bc1a8 , #bf7fff , transparent
+  );
+  filter:blur(4px) ;
+  animation: beam-run 3s linear infinite;
+}
+
+@keyframes beam-run {
+  0% { left: -35%; } 
+  100% { left: 115%; } 
+}
+
+@keyframes beam-bounce {
+  0%,100% { left: -35%; }
+  50% { left: 100%; }
+}
+
+.badge-tech {
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  align-items: center;
+  width: fit-content;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.badge-tech img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
