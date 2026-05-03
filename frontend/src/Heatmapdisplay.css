@@ -4,8 +4,10 @@
 .react-calendar-heatmap .color-scale-3 { fill: #26A641; }
 .react-calendar-heatmap .color-scale-4 { fill: #39D353; }
 
-.react-calendar-hatmap rect {
+.react-calendar-heatmap rect {
   rx: 1px;
+  width: 8px;  
+  height: 8px; 
 }
 
 .react-calendar-heatmap text {
